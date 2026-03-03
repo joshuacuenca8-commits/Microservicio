@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: microservicio
+  profiles:
+    active: dev  # perfil por defecto al correr local
+
+server:
+  port: 8081
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
