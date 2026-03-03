@@ -6,6 +6,10 @@ import com.joshuaCuenca.microservicio.service.ProductoService;
 import com.joshuaCuenca.microservicio.exception.ProductoNotFoundException;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.CacheEvict;
+
 @Service
 public class ProductoServiceImpl implements ProductoService {
     private final ProductoRepository productoRepository;
@@ -18,7 +22,9 @@ public class ProductoServiceImpl implements ProductoService {
     public List<Producto> obtenerTodos() {
         return productoRepository.findAll();
     }
-
+    // Guarda el resultado en cache la primera vez
+    // Las siguientes veces devuelve desde memoria sin ir a BD
+    @Cacheable(value = "productos", key = "#id")
     @Override
     public Producto obtenerProducto_ID(Long id) {
         return productoRepository.findById(id)
@@ -32,6 +38,8 @@ public class ProductoServiceImpl implements ProductoService {
         return productoRepository.save(producto);
     }
 
+    //actualiza el cache cuando se modifca el producto
+    @CachePut(value = "productos", key = "#id")
     @Override
     public Producto actualizarProducto(Long id, Producto producto) {
         Producto existente = productoRepository.findById(id)
@@ -41,7 +49,8 @@ public class ProductoServiceImpl implements ProductoService {
         existente.setStock(producto.getStock());
         return productoRepository.save(existente);
     }
-
+    //Elimina del cache cuando se borra el producto
+    @CacheEvict(value = "productos", key = "#id")
     @Override
     public void eliminar(Long id) {
         if(!productoRepository.existsById(id)){
