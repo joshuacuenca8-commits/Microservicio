@@ -1,4 +1,4 @@
-# 🛒 MS-Productos — Microservicio de Productos
+# MS-Productos — Microservicio de Productos
 
 Microservicio REST desarrollado con Spring Boot para la gestión de productos. Forma parte de una arquitectura de microservicios junto a `ms-usuarios` y `ms-ordenes`.
 
@@ -155,4 +155,5 @@ Password: (vacío)
 
 **Joshua Cuenca**
 Becario Backend Java — Curso Microservicios con Spring Boot
+
 
