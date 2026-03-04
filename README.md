@@ -23,7 +23,7 @@ Microservicio REST desarrollado con Spring Boot para la gestión de productos. F
 
 ## Estructura del proyecto
 ```
-ms-productos/
+Microservicio/
 ├── src/
 │   ├── main/
 │   │   ├── java/com/joshuaCuenca/microservicio/
@@ -60,22 +60,22 @@ ms-productos/
 
 ### Local
 ```bash
-git clone https://github.com/tuUsuario/ms-productos.git
-cd ms-productos
+git clone https://github.com/tuUsuario/Microservicio.git
+cd Microservicio
 ./mvnw spring-boot:run
 ```
 
 ### Con Docker
 ```bash
-docker build -t ms-productos:1.0.0 .
-docker run -p 8081:8081 --name ms-productos ms-productos:1.0.0
+docker build -t microservicio .
+docker run -p 8081:8081 --name mi-microservicio microservicio
 ```
 
 ---
 
 ## Endpoints
 
-Base URL: `http://localhost:8081/api/v1/productos`
+Base URL: `http://localhost:8081/api/productos`
 
 | Método | Ruta | Descripción | Status |
 |--------|------|-------------|--------|
@@ -147,7 +147,7 @@ Password: (vacío)
 | Rama | Descripción |
 |------|-------------|
 | `main` | Código estable |
-| `FIX-CreacionCRUD` | Desarrollo CRUD completo |
+
 
 ---
 
@@ -155,5 +155,6 @@ Password: (vacío)
 
 **Joshua Cuenca**
 Becario Backend Java — Curso Microservicios con Spring Boot
+
 
 
