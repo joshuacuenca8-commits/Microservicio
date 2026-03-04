@@ -4,7 +4,7 @@ Microservicio REST desarrollado con Spring Boot para la gestión de productos. F
 
 ---
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 | Tecnología | Versión |
 |-----------|---------|
@@ -21,7 +21,7 @@ Microservicio REST desarrollado con Spring Boot para la gestión de productos. F
 
 ---
 
-## 📁 Estructura del proyecto
+## Estructura del proyecto
 ```
 ms-productos/
 ├── src/
@@ -46,7 +46,7 @@ ms-productos/
 
 ---
 
-## ⚙️ Profiles
+## Profiles
 
 | Profile | Base de datos | Uso |
 |---------|--------------|-----|
@@ -56,7 +56,7 @@ ms-productos/
 
 ---
 
-## 🚀 Cómo correr el proyecto
+##  Cómo correr el proyecto
 
 ### Local
 ```bash
@@ -73,7 +73,7 @@ docker run -p 8081:8081 --name ms-productos ms-productos:1.0.0
 
 ---
 
-## 📡 Endpoints
+## Endpoints
 
 Base URL: `http://localhost:8081/api/v1/productos`
 
@@ -123,7 +123,7 @@ http://localhost:8081/swagger-ui.html
 # Reporte en: target/site/jacoco/index.html
 ```
 
-**Cobertura actual: 92%**
+**Cobertura actual: 80%**
 
 | Tipo | Clase | Tests |
 |------|-------|-------|
@@ -132,7 +132,7 @@ http://localhost:8081/swagger-ui.html
 
 ---
 
-## 🗄️ H2 Console (dev)
+## H2 Console (dev)
 ```
 http://localhost:8081/h2-console
 JDBC URL: jdbc:h2:mem:productos_dev
@@ -142,7 +142,7 @@ Password: (vacío)
 
 ---
 
-## 🌿 Ramas
+##Ramas
 
 | Rama | Descripción |
 |------|-------------|
@@ -151,7 +151,8 @@ Password: (vacío)
 
 ---
 
-## 👤 Autor
+## Autor
 
 **Joshua Cuenca**
 Becario Backend Java — Curso Microservicios con Spring Boot
+
