@@ -12,6 +12,7 @@ import org.springframework.cache.annotation.CacheEvict;
 
 @Service
 public class ProductoServiceImpl implements ProductoService {
+
     private final ProductoRepository productoRepository;
 
     public ProductoServiceImpl(ProductoRepository productoRepository) {
@@ -59,3 +60,15 @@ public class ProductoServiceImpl implements ProductoService {
         productoRepository.deleteById(id);
     }
 }
+
+
+
+
+      ///  | Anotación | Cuándo usarla |
+      ///  |-----------|--------------|
+      /// | `@Cacheable` | En consultas — guarda el resultado la primera vez |
+      ///  | `@CachePut` | En actualizaciones — actualiza el cache con el nuevo valor |
+      ///  | `@CacheEvict` | En eliminaciones — borra la entrada del cache |
+
+
+
