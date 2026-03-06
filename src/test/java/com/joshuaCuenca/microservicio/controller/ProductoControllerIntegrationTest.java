@@ -41,8 +41,8 @@ class ProductoControllerIntegrationTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(crearProductoDTO())))
                 .andExpect(status().isCreated())
-                .andExpect(jsonPath("$.nombre").value("Laptop Dell"))
-                .andExpect(jsonPath("$.precio").value(999.99))
+                .andExpect(jsonPath("$.name").value("Laptop Dell"))
+                .andExpect(jsonPath("$.price").value(999.99))
                 .andExpect(jsonPath("$.id").exists());
     }
 
@@ -64,7 +64,7 @@ class ProductoControllerIntegrationTest {
         // Luego lo buscamos
         mockMvc.perform(get("/api/productos/1"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.nombre").value("Laptop Dell"));
+                .andExpect(jsonPath("$.name").value("Laptop Dell"));
     }
 
     @Test
