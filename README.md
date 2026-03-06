@@ -113,7 +113,7 @@ http://localhost:8081/swagger-ui.html
 
 ---
 
-## 🧪 Tests
+##  Tests
 ```bash
 # Correr tests
 ./mvnw test
@@ -123,7 +123,7 @@ http://localhost:8081/swagger-ui.html
 # Reporte en: target/site/jacoco/index.html
 ```
 
-**Cobertura actual: 80%**
+**Cobertura actual: 76%**
 
 | Tipo | Clase | Tests |
 |------|-------|-------|
@@ -155,6 +155,7 @@ Password: (vacío)
 
 **Joshua Cuenca**
 Becario Backend Java — Curso Microservicios con Spring Boot
+
 
 
 
